@@ -5,7 +5,7 @@ function formatUrl(url: string, lastmod?: string) {
 }
 
 export function buildSitemapXml(baseUrl: string) {
-  const pages = ["/", "/categories", "/enviar-frase", "/favorites"];
+  const pages = ["/", "/categories", "/enviar-frase"]; // removed /favorites (private)
 
   // Add quote pages
   const quoteUrls = (quotes || []).map((q: any) => `/quotes/${q.id}`);

@@ -8,7 +8,7 @@ const DEFAULT_SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://motivaverse.ve
 
 export function buildSitemapXml(baseUrl: string = DEFAULT_SITE) {
   const normalizedBase = baseUrl.replace(/\/$/, '');
-  const pages = ["/", "/categories", "/enviar-frase", "/favorites"];
+  const pages = ["/", "/categories", "/enviar-frase"]; // removed /favorites (private)
 
   // Add quote pages
   const quoteUrls = (quotes || []).map((q: any) => `/quotes/${q.id}`);
