@@ -4,7 +4,7 @@ import { useFavorites } from "@/hooks/use-favorites";
 import { getQuotes } from "@/lib/quotes";
 import { QuoteCard } from "@/components/quote-card";
 import { Heart } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; 
 import type { Quote } from "@/types";
 
 /**
@@ -13,7 +13,25 @@ import type { Quote } from "@/types";
  */
 export default function FavoritesPage() {
   const { favorites } = useFavorites();
-  const allQuotes = getQuotes() || []; // <-- Solución: Asegurarse de que allQuotes sea un array
+  const [allQuotes, setAllQuotes] = useState<Quote[]>([]);
+
+  // Fetch quotes client-side (getQuotes returns a Promise that resolves to { quotes, lastVisible })
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await getQuotes();
+        const quotes = res?.quotes ?? [];
+        if (mounted) setAllQuotes(Array.isArray(quotes) ? quotes : []);
+      } catch (error) {
+        console.error('Failed to load quotes for favorites page', error);
+        if (mounted) setAllQuotes([]);
+      }
+    })();
+
+    return () => { mounted = false; };
+  }, []);
+
   const favoriteQuotes = allQuotes.filter((quote) => favorites.includes(quote.id));
 
   return (
