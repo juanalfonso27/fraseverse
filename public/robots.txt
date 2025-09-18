@@ -1,6 +1,8 @@
+
 User-agent: *
 Allow: /
-Sitemap: https://your-domain.com/sitemap.xml
 
-# Disallow indexing of user-specific or private pages
+# Evitar indexación de páginas de usuario/privadas
 Disallow: /favorites
+
+Sitemap: https://motivaverse.vercel.app/sitemap.xml
