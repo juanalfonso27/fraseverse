@@ -4,5 +4,3 @@ Allow: /
 
 # Evitar indexación de páginas de usuario/privadas
 Disallow: /favorites
-
-Sitemap: https://motivaverse.vercel.app/sitemap.xml
