@@ -11,7 +11,7 @@ export function AppFooter() {
     <footer className="border-t bg-background/80">
       <div className="container flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
         <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="FraseVerse logo" width={24} height={24} className="h-6 w-6" />
+          <Image src="/logo.png" alt="FraseVerse logo" width={24} height={24} className="h-14 w-14" />
           <span className="font-headline text-lg font-bold">FraseVerse</span>
         </div>
         <p className="flex items-center gap-1.5 text-center text-sm text-muted-foreground">
