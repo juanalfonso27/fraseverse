@@ -3,7 +3,7 @@ import { buildSitemapXml } from '@/lib/sitemap';
 
 export async function GET() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://motivaverse.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fraseverse.vercel.app';
     const xml = buildSitemapXml(baseUrl);
 
     return new NextResponse(xml, {

@@ -4,7 +4,7 @@ function formatUrl(url: string, lastmod?: string) {
   return `  <url>\n    <loc>${url}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
 }
 
-const DEFAULT_SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://motivaverse.vercel.app';
+const DEFAULT_SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://fraseverse.vercel.app';
 
 export function buildSitemapXml(baseUrl: string = DEFAULT_SITE) {
   const normalizedBase = baseUrl.replace(/\/$/, '');
