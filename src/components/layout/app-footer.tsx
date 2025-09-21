@@ -1,4 +1,5 @@
-import { Flame, Heart } from "lucide-react";
+import Image from 'next/image';
+import { Heart } from "lucide-react";
 import Link from "next/link";
 
 /**
@@ -10,8 +11,8 @@ export function AppFooter() {
     <footer className="border-t bg-background/80">
       <div className="container flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
         <div className="flex items-center space-x-2">
-          <Flame className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-bold">FraseVerse</span>
+          <Image src="/logo.png" alt="FraseVerse logo" width={24} height={24} className="h-6 w-6" />
+          <span className="font-headline text-lg font-bold">fVerse</span>
         </div>
         <p className="flex items-center gap-1.5 text-center text-sm text-muted-foreground">
           <Link href="/enviar-frase" className="font-semibold text-foreground hover:text-primary hover:underline">

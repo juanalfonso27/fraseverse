@@ -25,7 +25,7 @@ export function AppHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-0">
-          <Image src="/logo.png" alt="MotivaVerse Logo" width={56} height={56} priority className="h-14 w-14" />
+          <Image src="/logo.png" alt="fraseVerse Logo" width={56} height={56} priority className="h-14 w-14" />
           <span className="font-headline text-lg font-bold">FraseVerse</span>
         </Link>
         <div className="flex items-center gap-2">
