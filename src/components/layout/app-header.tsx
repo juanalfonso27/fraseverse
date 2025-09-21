@@ -25,7 +25,7 @@ export function AppHeader() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-0">
           <img src="/logo.png" alt="MotivaVerse Logo" className="h-14 w-14" />
-          <span className="font-headline text-lg font-bold">MotivaVerse</span>
+          <span className="font-headline text-lg font-bold">FraseVerse</span>
         </Link>
         <div className="flex items-center gap-2">
           <nav className="hidden items-center gap-4 md:flex">

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const quotes = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', 'quotes.json'), 'utf-8'));
-const BASE_URL = 'https://motivaverse.vercel.app';
+const BASE_URL = 'https://fraseverse.vercel.app';
 const OUT_DIR = path.join(__dirname, '..', 'public');
 
 function formatUrl(url: string, lastmod?: string) {
