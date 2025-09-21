@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { buildSitemapXml } from '../../src/lib/sitemap';
+import { buildSitemapXml } from '@/lib/sitemap';
 
 export function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://motivaverse.vercel.app';
