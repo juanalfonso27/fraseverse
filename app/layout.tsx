@@ -4,6 +4,10 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { AppHeader } from "@/components/layout/app-header";
 import { AppFooter } from "@/components/layout/app-footer";
+import { Poppins, PT_Sans } from 'next/font/google';
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['400','600','700'], display: 'swap' });
+const ptSans = PT_Sans({ subsets: ['latin'], weight: ['400','700'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'FraseVerse',
@@ -19,13 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" className={`${poppins.className} ${ptSans.className}`} suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="bA8k5JYK2Vwaxc6G5_EyyyoOdwkVJaOnaD8vy2Pthes" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
         <ThemeProvider>
