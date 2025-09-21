@@ -6,8 +6,8 @@ import { AppHeader } from "@/components/layout/app-header";
 import { AppFooter } from "@/components/layout/app-footer";
 
 export const metadata: Metadata = {
-  title: 'MotivaVerse',
-  description: 'Encuentra tu dosis diaria de inspiración.',
+  title: 'FraseVerse',
+  description: 'Frases inspiradoras y citas para compartir y reflexionar.',
   icons: {
     icon: '/favicon.ico',
   },
