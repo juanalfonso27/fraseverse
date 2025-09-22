@@ -27,10 +27,5 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'FraseVerse | Frases motivadoras e inspiradoras para reflexionar',
-    description: 'Frases motivadoras, inspiradoras y de amor para reflexionar y compartir.',
-    images: ['/og-image.png'],
-  },
+
 };
