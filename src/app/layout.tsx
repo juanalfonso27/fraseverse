@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'FraseVerse',
     images: [
       {
-        url: '/og-image.png', // 👉 te conviene crear una imagen atractiva para compartir
+        url: '/logo.png', // 👉 te conviene crear una imagen atractiva para compartir
         width: 1200,
         height: 630,
         alt: 'FraseVerse - Frases motivadoras e inspiradoras',
