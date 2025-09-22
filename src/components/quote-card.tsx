@@ -20,6 +20,14 @@ export function QuoteCard({ quote }: QuoteCardProps) {
   const { isFavorite } = useFavorites();
   const favorite = isFavorite(quote.id);
 
+  const categoryLabels: Record<string, string> = {
+    motivation: 'Motivación',
+    love: 'Amor',
+    friendship: 'Amistad',
+    success: 'Éxito',
+    reflection: 'Reflexión',
+  };
+
   return (
     <Card className={cn(
       "flex h-full flex-col transition-all duration-300 hover:shadow-xl",
@@ -34,7 +42,7 @@ export function QuoteCard({ quote }: QuoteCardProps) {
          <cite className="text-sm text-muted-foreground not-italic">— {quote.author}</cite>
       </CardContent>
       <CardFooter className="flex items-center justify-between">
-        <Badge variant="outline" className="capitalize">{quote.category}</Badge>
+  <Badge variant="outline">{categoryLabels[quote.category] ?? quote.category}</Badge>
         <QuoteActions quote={quote} />
       </CardFooter>
     </Card>
